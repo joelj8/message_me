@@ -21,7 +21,7 @@ helper_method :current_user, :logged_in?
   def require_user
     if !logged_in?
       flash[:danger] = "You must be logged in to perfom that action"
-      redirect_to root_path
+      redirect_to login_path
     end
   end
 
